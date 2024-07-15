@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  font-family: Roboto,Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+.full-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateX(90px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content.from-left {
+  transform: translateX(-90px);
+}
+
+.content.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.background-tech-sas::before {
+  background-image: url('/images/krbai.jpg');
+}
+
+.background-badaya-sas::before {
+  background-image: url('/images/krsti.jpg');
+}
+
+.background-rostu::before {
+  background-image: url('/images/krsbi.jpg');
+}
+
+.background-fitoplankton::before {
+  background-image: url('/images/fitoplankton.jpg');
+}
+
+section h1 {
+  z-index: 1;
+  margin: 0;
+  padding: 10px;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);
+  z-index: -1;
+}
+
+section:nth-of-type(odd) .content {
+  justify-content: flex-end;
+  text-align: left;
+  padding-right: 50%;
+}
+
+section:nth-of-type(even) .content {
+  justify-content: flex-start;
+  text-align: right;
+  padding-left: 50%;
+}
+
+.custom-button {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #bc2338;
+  background-color: transparent;
+  border: 2px solid #bc2338;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.4s ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.custom-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #bc2338;
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.custom-button:hover::before {
+  right: 0;
+}
+
+.custom-button:hover {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo h2 {
+    font-size: 1.2rem;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+  }
+
+  header nav ul li {
+    margin: 5px 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(31, 30, 30, 0.591);
+    position: absolute;
+    top: 74px;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-150%);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .nav-links.show {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .full-screen {
+    padding: 10px;
+  }
+
+  .full-screen h1 {
+    font-size: 1.5rem;
+    max-width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .background-tech-sas, .background-badaya-sas, .background-rostu, .background-fitoplankton {
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-content {
+    padding: 5px 10px;
+  }
+
+  .logo h2 {
+    font-size: 1.5rem;
+  }
+
+  header nav ul li {
+    margin: 0 5px;
+  }
+
+  .full-screen h1 {
+    font-size: 2rem;
+  }
+}

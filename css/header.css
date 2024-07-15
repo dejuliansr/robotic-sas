@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  font-family: Roboto,Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: rgba(31, 30, 30, 0.591);
+  color: #fff;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #bbb;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.burger-menu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo h2 {
+    font-size: 1.2rem;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+  }
+
+  header nav ul li {
+    margin: 5px 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(31, 30, 30, 0.591);
+    position: absolute;
+    top: 74px;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-150%);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .nav-links.show {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-content {
+    padding: 5px 10px;
+  }
+
+  .logo h2 {
+    font-size: 1.5rem;
+  }
+
+  header nav ul li {
+    margin: 0 5px;
+  }
+}
