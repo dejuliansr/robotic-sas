@@ -38,19 +38,19 @@ body {
 }
 
 .background-tech-sas::before {
-  background-image: url('/images/krbai.jpg');
+  background-image: url('../images/krbai.jpg');
 }
 
 .background-badaya-sas::before {
-  background-image: url('/images/krsti.jpg');
+  background-image: url('../images/krsti.jpg');
 }
 
 .background-rostu::before {
-  background-image: url('/images/krsbi.jpg');
+  background-image: url('../images/krsbi.jpg');
 }
 
 .background-fitoplankton::before {
-  background-image: url('/images/fitoplankton.jpg');
+  background-image: url('../images/fitoplankton.jpg');
 }
 
 section h1 {
