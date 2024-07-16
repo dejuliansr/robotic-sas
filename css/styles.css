@@ -38,19 +38,19 @@ body {
 }
 
 .background-tech-sas::before {
-  background-image: url('/images/krbai.jpg');
+  background-image: url('https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/krbai.jpg');
 }
 
 .background-badaya-sas::before {
-  background-image: url('/images/krsti.jpg');
+  background-image: url('https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/krsti.jpg');
 }
 
 .background-rostu::before {
-  background-image: url('/images/krsbi.jpg');
+  background-image: url('https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/krsbi.jpg');
 }
 
 .background-fitoplankton::before {
-  background-image: url('/images/fitoplankton.jpg');
+  background-image: url('https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/fitoplankton.jpg');
 }
 
 section h1 {
@@ -119,55 +119,6 @@ section:nth-of-type(even) .content {
 }
 
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo h2 {
-    font-size: 1.2rem;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    width: 100%;
-    text-align: left;
-  }
-
-  header nav ul li {
-    margin: 5px 0;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: rgba(31, 30, 30, 0.591);
-    position: absolute;
-    top: 74px;
-    left: 0;
-    padding: 0;
-    margin: 0;
-    transform: translateX(-150%);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-
-  .nav-links.show {
-    display: flex;
-    transform: translateX(0);
-  }
-
-  .nav-links li {
-    margin: 0;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .burger-menu {
-    display: block;
-  }
-
   .full-screen {
     padding: 10px;
   }
@@ -185,20 +136,8 @@ section:nth-of-type(even) .content {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  .header-content {
-    padding: 5px 10px;
-  }
-
-  .logo h2 {
-    font-size: 1.5rem;
-  }
-
-  header nav ul li {
-    margin: 0 5px;
-  }
-
+/* @media (min-width: 769px) and (max-width: 1024px) {
   .full-screen h1 {
     font-size: 2rem;
   }
-}
+} */
