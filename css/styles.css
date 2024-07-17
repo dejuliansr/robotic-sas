@@ -118,6 +118,71 @@ section:nth-of-type(even) .content {
   color: #333;
 }
 
+/* .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+} */
+
+.icon {
+  text-decoration: none;
+  padding: 10px 20px;
+  /* width: 5.625rem;
+  height: 5.625rem; */
+  border-radius: 5px;
+  border: 2px solid #bc2338;
+  /* background-color: hsla(209 20% 70% / 20%); */ /* For dark theme */
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.icon > i {
+  color: #bc2338;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+}
+
+.icon:hover > i {
+  scale: 1.2;
+  color: #333;
+}
+
+.icon:before {
+  background: var(--color);
+  content: "";
+  position: absolute;
+  width: 190%;
+  height: 290%;
+  left: -110%;
+  top: 80%;
+  transform: rotate(45deg);
+}
+
+.icon:hover:before {
+  animation: slide 0.7s forwards;
+}
+
+@keyframes slide {
+  50% {
+    left: 10%;
+    top: -40%;
+  }
+
+  100% {
+    left: -15%;
+    top: -15%;
+  }
+}
+
+.icon:has(.fa-instagram) {
+  --color: #ff0000;
+}
+
 @media (max-width: 768px) {
   .full-screen {
     padding: 10px;

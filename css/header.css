@@ -17,12 +17,14 @@ header {
   padding: 10px 20px;
 }
 
-.logo {
+.logo a{
   display: flex;
   align-items: center;
+  color: #fff;
+  text-decoration: none;
 }
 
-.logo img {
+.logo a img {
   width: 50px;
   height: auto;
 }

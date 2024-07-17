@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/logo_robotic.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <link rel="stylesheet" href="/css/contact-us.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/loading.css">
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <div id="loading">
+      <img src="https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/logo_robotic.png" alt="Loading" class="loading-logo">
+      <div class="loading-text">Loading<span class="dots">...</span></div>
+    </div>
+    <header>
+      <div class="header-content">
+        <div class="logo">
+          <a href="/index.html">
+            <img src="https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/logo_robotic.png" alt="Logo Robotic SAS">
+            <h2>Robotic SAS</h2>
+          </a>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#tech-sas">TECH_SAS</a></li>
+            <li><a href="#badaya-sas">BADAYA_SAS</a></li>
+            <li><a href="#rostu">ROSTU</a></li>
+            <li><a href="#fitoplankton">FITOPLANKTON</a></li>
+            <li><a href="">Hubungi Kami</a></li>
+          </ul>
+        </nav>
+        <span class="iconify burger-menu" data-icon="mdi:menu" data-inline="false"></span>
+      </div>
+    </header>
+    
+    <main>
+      <section id="contact-us" class="full-screen background">
+        <div class="content">
+          <h1>Ikuti kami di media sosial!</h1>
+          <div class="wrapper">
+            <a href="https://www.instagram.com/sasrobotic/" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://web.facebook.com/profile.php?id=100054243440302" target="_blank" class="icon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="http://www.youtube.com/@roboticschoolofappliedscie9515" target="_blank" class="icon"><i class="fa-brands fa-youtube"></i></a>
+            <!-- <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a> -->
+          </div>
+        </div>
+      </section>
+
+      <section id="address" class="content">
+        <h2>Alamat Kami</h2>
+        <div id="map"></div>
+        <p>Anda dapat menemukan kami di alamat berikut:</p>
+        <p>Fakultas Ilmmu Terapan, Universitas Telkom <br>
+          <a href="https://maps.app.goo.gl/g7wNZziF3bPmNUEU6" target="_blank">Jl. Telekomunikasi No.1, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257</a></p>
+        <p></p>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
