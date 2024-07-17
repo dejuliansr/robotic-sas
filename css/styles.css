@@ -84,47 +84,6 @@ section:nth-of-type(even) .content {
   padding-left: 50%;
 }
 
-.custom-button {
-  position: relative;
-  padding: 10px 20px;
-  font-size: 20px;
-  color: #bc2338;
-  background-color: transparent;
-  border: 2px solid #bc2338;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: color 0.4s ease-in-out;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.custom-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 100%;
-  background-color: #bc2338;
-  transition: all 0.4s ease-in-out;
-  z-index: -1;
-}
-
-.custom-button:hover::before {
-  right: 0;
-}
-
-.custom-button:hover {
-  color: #333;
-}
-
-/* .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-} */
-
 .icon {
   text-decoration: none;
   padding: 10px 20px;
