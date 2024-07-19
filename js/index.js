@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const burgerMenu = document.querySelector('.burger-menu');
-  const navLinks = document.querySelector('.nav-links');
+  const burgerMenu = document.querySelector(".burger-menu");
+  const navLinks = document.querySelector(burgerMenu.getAttribute("data-target"));
   const links = document.querySelectorAll('a[href^="#"]');
   const contents = document.querySelectorAll('.content');
   const loading = document.getElementById('loading');
@@ -13,9 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // menu pada headbar ketika layar kecil
-  burgerMenu.addEventListener('click', function () {
-    navLinks.classList.toggle('show');
-  });
+  if (burgerMenu && navLinks) {
+    burgerMenu.addEventListener("click", function() {
+      navLinks.classList.toggle("-translate-x-full");
+      navLinks.classList.toggle("translate-x-0");
+    });
+  }
 
   // animasi konten
   contents.forEach((content, index) => {
