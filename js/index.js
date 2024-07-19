@@ -13,12 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // menu pada headbar ketika layar kecil
-  if (burgerMenu && navLinks) {
-    burgerMenu.addEventListener("click", function() {
-      navLinks.classList.toggle("-translate-x-full");
-      navLinks.classList.toggle("translate-x-0");
-    });
-  }
+  burgerMenu.addEventListener("click", function() {
+    navLinks.classList.toggle("-translate-x-full");
+    navLinks.classList.toggle("translate-x-0");
+  });
 
   // animasi konten
   contents.forEach((content, index) => {
