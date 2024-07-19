@@ -1,75 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-body {
-  font-family: Roboto,Arial, sans-serif;
-  margin: 0;
-  background-color: #f9f9f9;
-}
-
-.full-screen {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.content {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  opacity: 0;
-  transform: translateX(90px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.content.from-left {
-  transform: translateX(-90px);
-}
-
-.content.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.background-tech-sas::before {
-  background-image: url('https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/krbai.jpg');
-}
-
-.background-badaya-sas::before {
-  background-image: url('https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/krsti.jpg');
-}
-
-.background-rostu::before {
-  background-image: url('https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/krsbi.jpg');
-}
-
-.background-fitoplankton::before {
-  background-image: url('https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/fitoplankton.jpg');
-}
-
-section h1 {
-  z-index: 1;
-  margin: 0;
-  padding: 10px;
-}
-
-section::before {
-  content: '';
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  filter: blur(1px);
-  z-index: -1;
+  background: rgba(0, 0, 0, 0.7); /* Warna hitam dengan opacity 50% */
+  z-index: 1;
 }
 
 section:nth-of-type(odd) .content {
@@ -82,6 +18,28 @@ section:nth-of-type(even) .content {
   justify-content: flex-start;
   text-align: right;
   padding-left: 50%;
+}
+
+.from-left {
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: all 0.6s ease-out;
+}
+
+.from-left.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.from-right {
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all 0.6s ease-out;
+}
+
+.from-right.visible {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .icon {
@@ -116,7 +74,7 @@ section:nth-of-type(even) .content {
   content: "";
   position: absolute;
   width: 190%;
-  height: 290%;
+  height: 260%;
   left: -110%;
   top: 80%;
   transform: rotate(45deg);
@@ -140,28 +98,4 @@ section:nth-of-type(even) .content {
 
 .icon:has(.fa-instagram) {
   --color: #ff0000;
-}
-
-@media (max-width: 768px) {
-  .full-screen {
-    padding: 10px;
-  }
-
-  .full-screen h1 {
-    font-size: 1.5rem;
-    max-width: 100%;
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  .background-tech-sas, .background-badaya-sas, .background-rostu, .background-fitoplankton {
-    justify-content: center;
-    padding: 0;
-  }
-}
-
-/* @media (min-width: 769px) and (max-width: 1024px) {
-  .full-screen h1 {
-    font-size: 2rem;
-  }
 }

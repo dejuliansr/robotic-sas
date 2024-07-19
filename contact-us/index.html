@@ -10,7 +10,7 @@
      crossorigin=""/>
     <link rel="stylesheet" href="../src/css/contact-us.css">
     <link rel="stylesheet" href="../src/css/loading.css">
-    <link href="dist/tailwind.css" rel="stylesheet">
+    <link href="../dist/tailwind.css" rel="stylesheet">
     <link rel="stylesheet" href="/src/output.css">
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
@@ -24,12 +24,12 @@
       <div class="header-content flex flex-row items-center justify-between max-w-6xl mx-auto p-3 md:p-5">
         <div class="logo">
           <a href="../index.html" class="flex items-center text-white no-underline">
-            <img src="https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/logo_robotic.png" alt="Logo Robotic SAS" class="w-12 h-auto">
-            <h2 class="ml-2 text-lg md:text-xl">Robotic SAS</h2>
+            <img src="https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/logo_robotic.png" alt="Logo Robotic SAS" class="w-16 h-auto">
+            <h2 class="ml-2 text-lg md:text-xl">Robotic SAS <br>Laboratory</h2>
           </a>
         </div>
         <nav>
-          <ul id="nav-links" class="nav-links flex flex-col md:flex-row list-none p-0 m-0 w-full md:w-auto bg-[rgba(31,30,30,0.591)] md:bg-transparent absolute md:relative top-14 md:top-0 left-0 md:left-auto transform md:transform-none -translate-x-full md:translate-x-0 transition duration-600 ease-out z-50 md:z-auto">
+          <ul id="nav-links" class="nav-links flex flex-col md:flex-row list-none p-0 m-0 w-full md:w-auto bg-[rgba(31,30,30,0.591)] md:bg-transparent absolute md:relative top-16 md:top-0 left-0 md:left-auto transform md:transform-none -translate-x-full md:translate-x-0 transition duration-600 ease-out z-50 md:z-auto">
             <li class="my-2 md:my-0 mx-0 md:mx-5 text-center">
               <a href="#tech-sas" class="block py-2 md:py-0 text-white no-underline transition duration-300 ease-in-out hover:text-gray-500">TECH_SAS</a>
             </li>
@@ -52,10 +52,11 @@
     </header>
     
     <main>
-      <section id="contact-us" class="full-screen background">
-        <div class="content">
-          <h1>Ikuti kami di media sosial!</h1>
-          <div class="wrapper">
+      <section id="contact-us" class="h-screen flex items-center justify-start pl-20 text-white relative overflow-hidden bg-black bg-robotic bg-opacity-70">
+        <div class="overlay"></div>
+        <div class="content z-10 pl-12">
+          <h1 class="text-4xl font-bold">Ikuti kami di media sosial!</h1>
+          <div class="wrapper my-1.5">
             <a href="https://www.instagram.com/sasrobotic/" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://web.facebook.com/profile.php?id=100054243440302" target="_blank" class="icon"><i class="fa-brands fa-facebook"></i></a>
             <a href="http://www.youtube.com/@roboticschoolofappliedscie9515" target="_blank" class="icon"><i class="fa-brands fa-youtube"></i></a>
@@ -64,14 +65,12 @@
           </div>
         </div>
       </section>
-
-      <section id="address">
-        <h2>Alamat Kami</h2>
-        <div id="map"></div>
-        <p>Anda dapat menemukan kami di alamat berikut:</p>
-        <p>Fakultas Ilmmu Terapan, Universitas Telkom <br>
-          <a href="https://maps.app.goo.gl/g7wNZziF3bPmNUEU6" target="_blank">Jl. Telekomunikasi No.1, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257</a></p>
-        <p></p>
+    
+      <section id="address" class="my-12 px-4 lg:px-32 mx-auto">
+        <h2 class="text-3xl mb-5">Alamat Kami</h2>
+        <div id="map" class="w-full h-96 mx-auto"></div>
+        <p class="mt-4">Anda dapat menemukan kami di alamat berikut:</p>
+        <p><a href="https://maps.app.goo.gl/g7wNZziF3bPmNUEU6" target="_blank" class="text-black">Fakultas Ilmmu Terapan, Universitas Telkom <br>Jl. Telekomunikasi No.1, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257</a></p>
       </section>
     </main>
 
