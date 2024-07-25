@@ -5,8 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const contents = document.querySelectorAll('.content');
   const loading = document.getElementById('loading');
 
-  menuBtn.addEventListener("click", () => {
-    document.body.classList.toggle("open");
+  menuBtn.addEventListener('click', () => {
+    document.body.classList.toggle('open');
+    if (document.body.classList.contains('open')) {
+      menuBtnIcon.setAttribute('data-icon', 'mdi-menu');
+    } else {
+      menuBtnIcon.setAttribute('data-icon', 'mdi-menu');
+    }
   });
 
   // Close menu when a link is clicked
