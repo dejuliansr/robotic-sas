@@ -11,7 +11,7 @@ module.exports = {
         'robotic': "url('https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/cover.png')"
       },
       fontFamily: {
-        roboto: ['Roboto', 'Arial', 'sans-serif'],
+        roboto: ['Ubuntu','Roboto', 'Arial', 'sans-serif'],
       },
     },
   },

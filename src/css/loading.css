@@ -17,45 +17,22 @@
   filter: blur(10px);
 }
 
-.loading-logo {
-  width: 100px;
-  height: 100px;
-  animation: zoomInOut 2s infinite;
+.loader {
+  width: 80px;
+  height: 70px;
+  border: 5px solid #000;
+  padding: 0 8px;
+  box-sizing: border-box;
+  background:
+    linear-gradient(#fff 0 0) 0    0/8px 20px,
+    linear-gradient(#fff 0 0) 100% 0/8px 20px,
+    radial-gradient(farthest-side,#fff 90%,#0000) 0 5px/8px 8px content-box,
+    #000;
+  background-repeat: no-repeat; 
+  animation: l3 2s infinite linear;
 }
-
-.loading-text {
-  font-size: 1.5rem;
-  color: #fff;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.dots::after {
-  content: '';
-  animation: dots 1s steps(3, end) infinite;
-}
-
-@keyframes zoomInOut {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
-
-@keyframes dots {
-  0%, 100% {
-    content: '';
-  }
-  33% {
-    content: '.';
-  }
-  66% {
-    content: '..';
-  }
-  99% {
-    content: '...';
-  }
+@keyframes l3{
+  25% {background-position: 0 0   ,100% 100%,100% calc(100% - 5px)}
+  50% {background-position: 0 100%,100% 100%,0    calc(100% - 5px)}
+  75% {background-position: 0 100%,100%    0,100% 5px}
 }

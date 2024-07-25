@@ -7,81 +7,82 @@
     <link rel="icon" href="https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/logo_robotic.png">
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="src/css/loading.css">
+    <link rel="stylesheet" href="src/css/header.css">
     <link href="dist/tailwind.css" rel="stylesheet">
-    <link rel="stylesheet" href="/src/output.css">
+    <!-- <link rel="stylesheet" href="/src/output.css"> -->
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   </head>
   <body>
     <div id="loading">
-      <a href=""></a>
-      <img src="https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/logo_robotic.png" alt="Loading" class="loading-logo">
-      <div class="loading-text">Loading<span class="dots">...</span></div>
+      <div class="loader"></div>
     </div>
-    <header class="bg-[rgba(31,30,30,0.591)] text-white fixed top-0 w-full z-50 transition duration-300 ease-in-out">
-      <div class="header-content flex flex-row items-center justify-between max-w-6xl mx-auto p-3 md:p-5">
-        <div class="logo">
-          <a href="" class="flex items-center text-white no-underline">
-            <img src="https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/logo_robotic.png" alt="Logo Robotic SAS" class="w-16 h-auto">
-            <h2 class="ml-2 text-lg md:text-xl">Robotic SAS <br>Laboratory</h2>
-          </a>
-        </div>
-        <nav>
-          <ul id="nav-links" class="nav-links flex flex-col md:flex-row list-none p-0 m-0 w-full md:w-auto bg-[rgba(31,30,30,0.591)] md:bg-transparent absolute md:relative top-14 md:top-0 left-0 md:left-auto transform md:transform-none -translate-x-full md:translate-x-0 transition duration-600 ease-out z-50 md:z-auto">
-            <li class="my-2 md:my-0 mx-0 md:mx-5 text-center">
-              <a href="#tech-sas" class="block py-2 md:py-0 text-white no-underline transition duration-300 ease-in-out hover:text-gray-500">TECH_SAS</a>
+    <header class="bg-[rgba(31,30,30,0.591)] text-white fixed top-0 w-full z-50">
+      <div class="p-3 md:p-5 z-50">
+        <a href="" class="flex items-center text-white no-underline">
+          <img src="https://raw.githubusercontent.com/dejuliansr/robotic-sas/main/images/logo_robotic.png" alt="Logo Robotic SAS" class="w-16 h-auto">
+          <h2 class="ml-2 text-lg md:text-xl">Robotic SAS <br>Laboratory</h2>
+        </a>
+      <div class="backdrop"></div>
+      <button class="menu-btn flex justify-end">
+        <span class="iconify menu-icon" data-icon="mdi-menu" data-inline="false"></span>
+      </button>
+      <div class="menu">
+        <nav id="menu">
+          <ul class="menu-list">
+            <li>
+              <a href="#tech-sas" data-text="TECH_SAS" style="animation-delay: 0.2s;">TECH_SAS</a>
             </li>
-            <li class="my-2 md:my-0 mx-0 md:mx-5 text-center">
-              <a href="#badaya-sas" class="block py-2 md:py-0 text-white no-underline transition duration-300 ease-in-out hover:text-gray-500">BADAYA_SAS</a>
+            <li>
+              <a href="#badaya-sas" data-text="BADAYA_SAS" style="animation-delay: 0.3s;">BADAYA_SAS</a>
             </li>
-            <li class="my-2 md:my-0 mx-0 md:mx-5 text-center">
-              <a href="#rostu" class="block py-2 md:py-0 text-white no-underline transition duration-300 ease-in-out hover:text-gray-500">ROSTU</a>
+            <li>
+              <a href="#rostu" data-text="ROSTU" style="animation-delay: 0.4s;">ROSTU</a>
             </li>
-            <li class="my-2 md:my-0 mx-0 md:mx-5 text-center">
-              <a href="#fitoplankton" class="block py-2 md:py-0 text-white no-underline transition duration-300 ease-in-out hover:text-gray-500">FITOPLANKTON</a>
+            <li>
+              <a href="#fitoplankton" data-text="FITOPLANKTON" style="animation-delay: 0.5s;">FITOPLANKTON</a>
             </li>
-            <li class="my-2 md:my-0 mx-0 md:mx-5 text-center">
-              <a href="contact-us/index.html" class="block py-2 md:py-0 text-white no-underline transition duration-300 ease-in-out hover:text-gray-500">Hubungi Kami</a>
+            <li>
+              <a href="contact-us/index.html" data-text="Contact" style="animation-delay: 0.6s;">Contact</a>
             </li>
           </ul>
         </nav>
-        <span class="iconify burger-menu md:hidden text-2xl cursor-pointer" data-icon="mdi:menu" data-inline="false" data-target="#nav-links"></span>
       </div>
     </header>  
     
     <main>
-      <section id="tech-sas" class="h-screen flex items-center justify-center bg-tech-sas bg-cover bg-center relative text-white">
+      <section id="tech-sas" class="h-screen flex items-center justify-center bg-tech-sas bg-cover bg-center relative text-white w-full">
         <div class="overlay"></div>
         <div class="content z-10 flex flex-col items-center text-center">
-          <h1 class="z-10 m-0 p-2">TECH_SAS</h1>
+          <h1 class="z-10 m-0 p-2 font-bold">TECH_SAS</h1>
           <a href="#" class="icon relative inline-flex items-center justify-center px-5 text-red-600 border-2 border-red-600 rounded bg-transparent">
-            <i class="fa-brands fa-instagram transition-transform duration-200">Learn More</i>
+            <i class="fa-brands fa-instagram transition-transform duration-200 font-bold">Learn More</i>
           </a>
         </div>
       </section>
-      <section id="badaya-sas" class="h-screen flex items-center justify-center bg-badaya-sas bg-cover bg-center relative text-white">
+      <section id="badaya-sas" class="h-screen flex items-center justify-center bg-badaya-sas bg-cover bg-center relative text-white w-full">
         <div class="overlay"></div>
         <div class="content z-10 from-right flex flex-col items-center text-center">
-          <h1 class="z-10 m-0 p-2">BADAYA_SAS</h1>
+          <h1 class="z-10 m-0 p-2 font-bold">BADAYA_SAS</h1>
           <a href="#" class="icon relative inline-flex items-center justify-center px-5 text-red-600 border-2 border-red-600 rounded bg-transparent">
-            <i class="fa-brands fa-instagram transition-transform duration-200">Learn More</i>
+            <i class="fa-brands fa-instagram transition-transform duration-200 font-bold">Learn More</i>
           </a>
         </div>
       </section>
-      <section id="rostu" class="h-screen flex items-center justify-center bg-rostu bg-cover bg-center relative text-white">
+      <section id="rostu" class="h-screen flex items-center justify-center bg-rostu bg-cover bg-center relative text-white w-full">
         <div class="overlay"></div>
         <div class="content z-10 flex flex-col items-center text-center">
-          <h1 class="z-10 m-0 p-2">ROSTU</h1>
+          <h1 class="z-10 m-0 p-2 font-bold">ROSTU</h1>
           <a href="#" class="icon relative inline-flex items-center justify-center px-5 text-red-600 border-2 border-red-600 rounded bg-transparent">
-            <i class="fa-brands fa-instagram transition-transform duration-200">Learn More</i>
+            <i class="fa-brands fa-instagram transition-transform duration-200 font-bold">Learn More</i>
           </a>
         </div>
       </section>
-      <section id="fitoplankton" class="h-screen flex items-center justify-center bg-fitoplankton bg-cover bg-center relative text-white">
+      <section id="fitoplankton" class="h-screen flex items-center justify-center bg-fitoplankton bg-cover bg-center relative text-white w-full">
         <div class="overlay"></div>
         <div class="content z-10 from-right flex flex-col items-center text-center">
-          <h1 class="z-10 m-0 p-2">FITOPLANKTON</h1>
+          <h1 class="z-10 m-0 p-2 font-bold">FITOPLANKTON</h1>
           <a href="#" class="icon relative inline-flex items-center justify-center px-5 text-red-600 border-2 border-red-600 rounded bg-transparent">
-            <i class="fa-brands fa-instagram transition-transform duration-200">Learn More</i>
+            <i class="fa-brands fa-instagram transition-transform duration-200 font-bold">Learn More</i>
           </a>
         </div>
       </section>

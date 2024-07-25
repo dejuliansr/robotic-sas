@@ -1,21 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const burgerMenu = document.querySelector(".burger-menu");
-  const navLinks = document.querySelector(burgerMenu.getAttribute("data-target"));
+  const menuBtn = document.querySelector('.menu-btn');
+  const menuBtnIcon = menuBtn.querySelector('.iconify');
   const links = document.querySelectorAll('a[href^="#"]');
   const contents = document.querySelectorAll('.content');
   const loading = document.getElementById('loading');
+
+  menuBtn.addEventListener("click", () => {
+    document.body.classList.toggle("open");
+  });
+
+  // Close menu when a link is clicked
+  const menuLinks = document.querySelectorAll('.menu a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('open');
+      menuBtnIcon.setAttribute('data-icon', 'mdi-menu');
+    });
+  });
 
   // loading
   window.addEventListener('load', function () {
     setTimeout(function () {
       loading.classList.add('hidden');
     }, 2000);
-  });
-
-  // menu pada headbar ketika layar kecil
-  burgerMenu.addEventListener("click", function() {
-    navLinks.classList.toggle("-translate-x-full");
-    navLinks.classList.toggle("translate-x-0");
   });
 
   // animasi konten
